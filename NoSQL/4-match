@@ -1,0 +1,2 @@
+// database collection creation and insertion
+db.school.find({"Holberton school"})
