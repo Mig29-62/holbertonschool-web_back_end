@@ -1,3 +1,4 @@
 // database creation
 DB_NAME=$1
-mongo $DB_NAME --eval 'db.school.insertOne({ name: "Holberton school" })'
+result=$(mongo $DB_NAME --eval 'db.school.insertOne({ name: "Holberton school" })')
+echo "$result" | grep -o 'WriteResult.*'
