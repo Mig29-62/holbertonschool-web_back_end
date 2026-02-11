@@ -1,1 +1,1 @@
-// we use show command to show available databases
+//database creation
