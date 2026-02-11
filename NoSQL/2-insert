@@ -1,3 +1,2 @@
 // database creation
-DB-NAME="$1"
-mongosh  "$DB-NAME" --eval "db.school.insertOne({name:'Holberton School'})"
+mongo   --eval "db.school.insertOne({name:'Holberton School'})"
