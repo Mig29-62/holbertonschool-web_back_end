@@ -3,6 +3,9 @@
 
 from pymongo import MongoClient
 
-def update_topics(mongo_collection,name,topics):
-    """we insert new document and return id"""
-    result = mongo_collection.update(name,topics) 
+def update_topics(mongo_collection, name, topics):
+    """Update topics """
+    result = mongo_collection.update_one(
+        {'name': name},  
+        {'$set': {'topics': topics}}  
+    )
