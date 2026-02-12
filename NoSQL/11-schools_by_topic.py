@@ -5,5 +5,5 @@ from pymongo import MongoClient
 
 def schools_by_topic(mongo_collection,topic):
     """ we use find function"""
-    result = mongo_collection.find(topic)  
-    return result 
+    result = mongo_collection.find({"topics":topic})  
+    return result;
