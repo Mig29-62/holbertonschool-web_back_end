@@ -12,7 +12,7 @@ def get_nginx_stats():
     methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
     method_counts = {method: collection.count_documents({"method": method}) for method in methods}
     get_status_count = collection.count_documents({"method": "GET", "path": "/status"})
-    
+    """we print total logs and using loop print ip for every other method"""
     print(f"{total_logs} logs")
     for method in methods:
         print(f"\t{method}: {method_counts[method]} logs")
