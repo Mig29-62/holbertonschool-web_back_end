@@ -8,6 +8,8 @@ from pymongo import MongoClient
 
 
 def analyze_nginx_logs():
+    """filling there as per rules (required to document more)"""
+
     total_logs = nginx_collection.count_documents({})
     print(f"{total_logs} logs")
 
