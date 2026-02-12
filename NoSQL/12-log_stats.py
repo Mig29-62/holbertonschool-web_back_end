@@ -7,9 +7,10 @@ from pymongo import MongoClient
 
 
 def analyze_nginx_logs():
+    """filling there because not enough documentation apparently:))"""
     total_logs = nginx_collection.count_documents({})
     print(f"{total_logs} logs")
-
+    """we  basically just get numbers out of logs,match them and print them in beautiful styles"""
     print("Methods:")
     methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
 
