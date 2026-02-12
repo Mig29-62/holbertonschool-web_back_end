@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
+"""intro of the module"""
+
 from pymongo import MongoClient
-client = MongoClient('mongodb://127.0.0.1:27017')
-db=client.mydatabase
-collection=db.mycollection
-listed=collection.find({})
-return listed
+def list_all(mongo_collection)
+"""using find to list all documents"""
+
+	listed=collection.find({})
+	return listed
