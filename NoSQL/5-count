@@ -1,2 +1,2 @@
 // database collection creation and insertion
-db.school.countDocuments({name:"Holberton school"})
+db.school.countDocuments({name: "Holberton school" })
