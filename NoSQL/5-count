@@ -1,0 +1,2 @@
+// database collection creation and insertion
+db.school.count({name:"Holberton school"})
