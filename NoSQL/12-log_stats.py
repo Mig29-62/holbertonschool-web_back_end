@@ -19,19 +19,19 @@ def log_stats():
 
     # Total number of logs in the collection
     total_logs = nginx_collection.count_documents({})
-    print(f"\nTotal Logs: {total_logs}\n{'-' * 20}")
-    
-    # Count logs for each HTTP method
+    print(f"{total_logs} logs\n")
+
+    # Methods section
     print("Methods:")
     methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
     
     for method in methods:
         method_count = nginx_collection.count_documents({"method": method})
-        print(f"  {method}: {method_count}")
+        print(f"method {method}: {method_count}")
     
     # Count '/status' checks for the 'GET' method
     status_checks = nginx_collection.count_documents({"method": "GET", "path": "/status"})
-    print(f"\nStatus Check (GET /status): {status_checks}")
+    print(f"\n{status_checks} status check")
 
 if __name__ == "__main__":
     log_stats()
