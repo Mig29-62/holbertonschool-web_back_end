@@ -20,3 +20,6 @@ def get_nginx_stats():
     for method in methods:
         print(f"\t{method}: {method_counts[method]} logs")
     print(f"GET /status: {get_status_count} logs")
+if __name__ == "__main__":
+    get_nginx_stats()
+	
