@@ -5,5 +5,5 @@ from pymongo import MongoClient
 
 def insert_school(mongo_collection, **kwargs):
     """we insert new document and return id"""
-    result = mongo_collection.insert_one(kwargs)  # Insert the document
+    result = mongo_collection.insert_one(kwargs)  
     return result.inserted_id 
